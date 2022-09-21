@@ -1,15 +1,15 @@
 #include <stdio.h>
-#define POSL 1
-#define PARAL 2
-float resist(float a, float b, int type)
+#define POS 1
+#define PAR 2
+float resistor(float a, float b, int type)
 {
-    if (type == POSL)
+    if (type == POS)
         return a + b;
-    if (type == PARAL)
+    if (type == PAR)
         return (a * b) / (a + b);
 }
 int main(void)
 {
-    printf("%f\n", resist(50, 20, POSL));
-    printf("%f\n", resist(50, 100, PARAL));
+    printf("%f\n", resistor(50, 20, POS));
+    printf("%f\n", resistor(50, 100, PAR));
 }
